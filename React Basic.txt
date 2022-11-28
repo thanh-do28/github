@@ -1,0 +1,113 @@
+// 1.React là gì? Library và framework ???
+// Bản chất là thư viện, khi đi kèm với các công cụ khác như là React-router, Redux
+//  --> cả combo sẽ được coi là framework
+
+// 2.Công dụng của React
+// - Phân chia web app -> components theo separation of concerns (feature)
+
+// 3. Setup React vào trong frontend thuần (CDN)
+
+// 4. Setup React dựa vào boilerplate Create-react-app
+// npx create-react-app <folder_name>
+
+// 5.Class-based components vs Funtional components
+
+// 6.Class-based components
+
+// import React from "react";
+
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <>
+//         <h1>State</h1>
+//       </>
+//     );
+//   }
+// }
+// export default App;
+
+// 7. import và export
+// -export default (chỉ export default được 1 lần)
+// -export thường thì có thể export được nhiều lần
+
+// -import từ file export default không cần {}
+// -import từ file export không default thì cần {}
+
+// 8. Properties (props)-thuộc tính
+// - props được truyền trực tiếp vào component dưới dạng
+//    key= value (giống kiểu attribute trng HTML)
+// vd:<Hello name="Dung" age={20}/>
+
+// Để truy cập vào props trong component
+// -> this.props.key
+
+// prop là một immutable object
+// -> không thể update hay thay đổi các thuốc tính thông qua việc 
+// truy xuất trong và gán lại giá trị
+
+// VD: <Hello name="Dung" age={20}/>
+//  --> this.props.name = "Bach" (Error)
+
+// 9. Set defaultProps
+// static defaultProps = {
+  // name: "Annoynimous"
+  // age: 18
+// }
+
+
+
+
+Review react:
+I. React là gì
+- React là 1 thư viện JavaScript fontend giúp dev có thể phân tách trang web thành những components
+- Các component này có thể được tái sử dụng và custom xuyên suốt chương trình code react
+==> Một chương trình React là tổ hợp của rất nhiều component được ghép lại với nhau
+
+// Component chính là trọng điểm của React
+
+II. Component trong React
+	Trong React có 2 loại Component chính
+- Class-based component (*)
+- Funtional component
+
+(*) Class-based component
+	Cấu trúc cơ bản của 1 class-based component
+1. Import React và {Component} from "react"
+
+// import React from "react";
+2.
+// class App extends React.Component {
+// Phuonwt thức khởi tạo contrustor- Sẽ được chạy đầu tiên
+// Sau đó mới đến render
+---> Constructor là nơi chúng ta khai báo và setup những biến khởi tạo đầu tiên
+hoặc những phương thức khởi tạo đầu tiên trước khi component được render ra lần đầu tiền
+  constructor(props){
+	super(props)
+}
+// Phương thức render dùng để render JSX ra màn hình browser
+//   render() {
+//	JSX-Là 1 dạng template engine (Gần giống HTMl nhưng k phải HTML)
+// có thể sử dụng cú pháp js trong đó thông qua cặp ngoặc {}
+//     return (
+//       <>
+//         <h1>State</h1>
+//       </>
+//     );
+//   }
+// }
+3. Phải export default
+// export default App;
+
+
+//import
+Có thể import TRƯC TIẾP đối với những component được export default
+-> import REACT from "react"
+
+import {Hello,...} from"..."
+
+
+
+
+
+
